@@ -1,0 +1,206 @@
+/* Reset & Base */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", "Noto Sans JP", "Hiragino Kaku Gothic Pro", sans-serif;
+  line-height: 1.8;
+  color: #333;
+  background-color: #fafafa;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 24px;
+}
+
+a {
+  color: #1a5276;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 0;
+  border-bottom: 2px solid #1a5276;
+  margin-bottom: 32px;
+}
+
+.lang-switch button {
+  background: none;
+  border: 1px solid #1a5276;
+  color: #1a5276;
+  padding: 4px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.lang-switch button:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.lang-switch button:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.lang-switch button.active {
+  background: #1a5276;
+  color: #fff;
+}
+
+/* Profile */
+.profile {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.profile-photo {
+  flex-shrink: 0;
+}
+
+.photo-placeholder {
+  width: 160px;
+  height: 200px;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.profile-photo img {
+  width: 160px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.profile-info h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #1a5276;
+}
+
+.furigana {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.affiliation {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.email {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.fields {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 36px;
+}
+
+.section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a5276;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+}
+
+/* CV Table */
+.cv-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cv-table td {
+  padding: 8px 0;
+  vertical-align: top;
+  font-size: 15px;
+}
+
+.cv-date {
+  width: 220px;
+  white-space: nowrap;
+  color: #555;
+  padding-right: 16px;
+}
+
+.cv-table tr + tr td {
+  border-top: 1px solid #eee;
+}
+
+/* Links */
+.links-list {
+  list-style: none;
+  padding: 0;
+}
+
+.links-list li {
+  font-size: 15px;
+  padding: 4px 0;
+}
+
+.links-list a::before {
+  content: "\25B8 ";
+  color: #1a5276;
+}
+
+/* Footer */
+footer {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cv-date {
+    width: auto;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .cv-table td {
+    display: block;
+  }
+
+  .cv-table tr + tr td {
+    border-top: none;
+  }
+
+  .cv-table tr + tr td:first-child {
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+  }
+}
